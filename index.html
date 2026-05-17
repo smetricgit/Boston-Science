@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Science Bee Quiz</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="hero">
+      <p class="eyebrow">Science Bee Trainer</p>
+      <h1>Practice Science Bee questions</h1>
+      <p>Random tossups from the uploaded question packet, with flexible answer checking and score tracking.</p>
+      <div class="controls">
+        <button id="startBtn">Start quiz</button>
+        <button id="shuffleBtn" class="secondary">Shuffle</button>
+        <label>
+          Round
+          <select id="roundSelect"><option value="all">All rounds</option></select>
+        </label>
+      </div>
+    </section>
+
+    <section class="card" aria-live="polite">
+      <div class="meta">
+        <span id="roundLabel">Ready</span>
+        <span id="progressLabel">0 / 0</span>
+      </div>
+      <h2>Question</h2>
+      <p id="questionText">Click Start quiz to begin.</p>
+      <form id="answerForm">
+        <input id="answerInput" type="text" autocomplete="off" placeholder="Type your answer..." />
+        <button type="submit">Check</button>
+      </form>
+      <div id="result" class="result hidden"></div>
+      <div class="actions">
+        <button id="showAnswerBtn" class="secondary">Show answer</button>
+        <button id="nextBtn">Next question</button>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div><strong id="scoreLabel">0</strong><span>Correct</span></div>
+      <div><strong id="attemptLabel">0</strong><span>Attempts</span></div>
+      <div><strong id="accuracyLabel">0%</strong><span>Accuracy</span></div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

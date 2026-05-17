@@ -1,0 +1,27 @@
+:root { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #172033; background: #eef3fb; }
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px; }
+.app { width: min(960px, 100%); display: grid; gap: 18px; }
+.hero, .card, .stats { background: rgba(255,255,255,.94); border: 1px solid rgba(23,32,51,.08); box-shadow: 0 20px 60px rgba(21,37,66,.12); border-radius: 24px; padding: 28px; }
+.eyebrow { margin: 0 0 8px; text-transform: uppercase; letter-spacing: .14em; color: #49678f; font-weight: 700; font-size: 12px; }
+h1 { margin: 0; font-size: clamp(32px, 5vw, 56px); line-height: 1; }
+h2 { margin: 14px 0 10px; }
+p { line-height: 1.6; }
+.controls, .actions, form { display: flex; flex-wrap: wrap; gap: 12px; align-items: end; }
+label { display: grid; gap: 6px; color: #49678f; font-size: 14px; font-weight: 700; }
+select, input { border: 1px solid #cad5e5; border-radius: 14px; padding: 13px 14px; font: inherit; background: white; min-width: 220px; }
+input { flex: 1; min-width: 260px; }
+button { border: 0; border-radius: 14px; padding: 13px 18px; font: inherit; font-weight: 800; cursor: pointer; color: white; background: #2952cc; transition: transform .12s ease, opacity .12s ease; }
+button:hover { transform: translateY(-1px); }
+button.secondary { background: #d9e4f7; color: #18315f; }
+.meta { display: flex; justify-content: space-between; gap: 12px; color: #49678f; font-weight: 800; }
+#questionText { font-size: 18px; }
+.result { margin: 16px 0; padding: 16px; border-radius: 16px; background: #f4f7fd; border: 1px solid #dce6f7; }
+.result.correct { background: #ecfdf3; border-color: #b8eac9; }
+.result.incorrect { background: #fff4f2; border-color: #ffd0c8; }
+.hidden { display: none; }
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; text-align: center; }
+.stats div { padding: 12px; border-radius: 18px; background: #f4f7fd; }
+.stats strong { display: block; font-size: 28px; }
+.stats span { color: #49678f; font-weight: 700; }
+@media (max-width: 640px) { body { padding: 12px; } .hero, .card, .stats { padding: 20px; border-radius: 18px; } .stats { grid-template-columns: 1fr; } button, select, input { width: 100%; } }
